@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %} Batafsil ma'lumot {% endblock title %}
+
+{% block content %}
+
+{% if news %}
+
+  <div class="card mb-3 mt-5 " >
+    <div class="card-header">
+      <a href="?news_id={{ news.id }}" class="btn btn-danger" onclick="return confirm('Rostan o`chirasizmi ?')">O'chirish</a>
+      <a href="{% url "edit" news.id %}" class="btn btn-warning">O'zgartirish</a>
+    </div>
+  <div class="row g-0">
+    <div class="col-md-4">
+      {% if news.rasm %}
+      <img src="{{ news.rasm.url }}" class="img-fluid rounded-start" alt="...">
+      {% endif %}
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> {{ news.sarlavha }} </h5>
+        <small class="card-text text-muted"> {{ news.taglavha }} </small>
+        <p class="card-text">
+
+            {{ news.asosoiy_matn }}
+        </p>
+        <p class="card-text "><small class="text-body-secondary"> {{ news.created_at }} </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% else %}
+<h1>News not found</h1>
+<p>This page does not exist anymore</p>
+{% endif %}
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+1. kompyuterni internetga ulang
+2. CMD orqali dastur papkasiga kirib oling
+3. virtualenv oching va uni ishga tushuring
+4. pip install -r requirements.txt  ==> deb cmd ga yozing
+5. py manage.py makemigrations ==> CMD ga yozing
+6.  py manage.py migrate ==> CMD ga yozing
+7.  py manage.py createsuperuser ==> CMD ga yozing
+8.  py manage.py runserver ==> CMD ga yozing va dastur ishga tushadi
+
+
+----------------------------------------------------------------
+
+CMD ga kirish va virtual muhit ochish tushuntirish.docx faylida yozilgan
